@@ -217,6 +217,9 @@
     <ClCompile Include="render\render.cpp" />
     <ClCompile Include="gui\controls\text_input.cpp" />
     <ClCompile Include="gui\controls\buton.cpp" />
+    <ClCompile Include="hack\features\resolver.cpp">
+      <Filter>hack\features</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="hack\hooks\vmt.h">
@@ -477,6 +480,9 @@
     <ClInclude Include="render\render.h" />
     <ClInclude Include="gui\controls\text_input.h" />
     <ClInclude Include="gui\controls\buton.h" />
+    <ClInclude Include="hack\features\resolver.hpp">
+      <Filter>hack\features</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Library Include="lib\detours.lib">

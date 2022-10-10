@@ -75,6 +75,7 @@
     <ClCompile Include="hack\sdk\other\checksum_md5.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="render\render.cpp" />
+    <ClCompile Include="hack\features\resolver.cpp" />
     <ClCompile Include="utils\math.cpp" />
     <ClCompile Include="utils\utl.cpp" />
   </ItemGroup>
@@ -164,6 +165,7 @@
     <ClInclude Include="hack\sdk\other\virtual.h" />
     <ClInclude Include="hack\sdk\src_kit.h" />
     <ClInclude Include="render\render.h" />
+    <ClInclude Include="hack\features\resolver.hpp" />
     <ClInclude Include="utils\math.h" />
     <ClInclude Include="utils\singleton.h" />
     <ClInclude Include="utils\utl.h" />
