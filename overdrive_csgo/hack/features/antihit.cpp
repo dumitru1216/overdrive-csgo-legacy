@@ -57,7 +57,7 @@ void antiaim::run( CUserCmd* cmd )
 	switch ( cfg.antiaim.yaw )
 	{
 	case 1:
-		cmd->viewangles.y += 119.f;
+		cmd->viewangles.y += 180.f;
 		break;
 	}
 

@@ -4,7 +4,7 @@
 #include "../../features/animations.h"
 #include "../../features/prediction.h"
 #include "../../features/visuals.h"
-
+#include "../../features/resolver.hpp"
 #include "../../sdk/other/e_nums.h"
 #include "../../../gui/config/config.h"
 
@@ -34,6 +34,17 @@ void __stdcall hooks::frame_stage_notify( client_frame_stage_t stage ) {
 				prediction::get( ).update_vel( );
 			}
 
+			if ( stage == frame_net_update_postdataupdate_start ) {
+				for ( int i = 1; i <= g_csgo.global_vars( )->m_maxclients; i++ ) {
+					m_entity* e = static_cast< m_entity* >( g_csgo.entitylist( )->GetClientEntity( i ) );
+
+					if ( !e || !e->is_alive( ) || e->IsDormant( ) || e == csgo::m_local )
+						continue;
+
+					c_resolver::get( ).run( e );			
+				}
+			}
+
 			if ( stage == frame_net_update_end )
 			{
 				prediction::get( ).setup_data( );
@@ -52,8 +63,16 @@ void __stdcall hooks::frame_stage_notify( client_frame_stage_t stage ) {
 						csgo::m_update[ e->EntIndex( ) ] = true;
 						e->update_client_side_animation( );
 						csgo::m_update[ e->EntIndex( ) ] = false;
+
+						auto VarMap = reinterpret_cast< uintptr_t >( e ) + 36;
+						auto VarMapSize = *reinterpret_cast< int* >( VarMap + 20 );
+
+						for ( auto index = 0; index < VarMapSize; index++ )
+							*reinterpret_cast< uintptr_t* >( *reinterpret_cast< uintptr_t* >( VarMap ) + index * 12 ) = 0; // bameware
 					}
 				}
+
+
 
 				//animations::get( ).fake_animations( );
 				//animations::get( ).local_animations( );
