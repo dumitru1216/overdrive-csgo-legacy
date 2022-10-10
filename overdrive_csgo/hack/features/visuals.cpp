@@ -268,54 +268,30 @@ void visuals::util_trace_hull( const Vector& vec_start, const Vector& vec_end, c
 }
 
 void visuals::third_person( ) {
+	if ( g_csgo.engine( )->IsInGame( ) && g_csgo.engine( )->IsConnected( ) ) {
+		if ( csgo::m_local ) {
+			static bool init = false;
 
-	if ( !csgo::m_local )
-		return;
-
-	if ( !csgo::m_local->is_alive( ) && cfg.misc.tp_bool )
-	{
-		g_csgo.input( )->m_fCameraInThirdPerson = false;
-		csgo::m_local->m_iObserverMode( ) = 5;
-		return;
-	}
-
-	if ( !csgo::m_local->m_hActiveWeapon( ) )
-		return;
-
-	if ( !csgo::m_local->m_hActiveWeapon( )->m_data( ) )
-		return;
-
-	if ( cfg.misc.tp_on_grenade && cfg.misc.tp_bool )
-	{
-		if ( csgo::m_local->m_hActiveWeapon( )->is_grenade( ) )
-		{
-			g_csgo.input( )->m_fCameraInThirdPerson = false;
-			return;
+			if ( utils::get_key( cfg.misc.tp_key, cfg.misc.tp_style ) && cfg.misc.tp_bool && csgo::m_local->is_alive() ) {
+				if ( init ) {
+					ConVar* sv_cheats = g_csgo.cvar()->FindVar( "sv_cheats" );
+					*( int* )( ( DWORD )&sv_cheats->fnChangeCallback + 0xC ) = 0; // ew
+					sv_cheats->SetValue( 1 );
+					g_csgo.engine( )->ExecuteClientCmd( "thirdperson" );
+				}
+				init = false;
+			}
+			else {
+				if ( !init ) {
+					ConVar* sv_cheats = g_csgo.cvar( )->FindVar( "sv_cheats" );
+					*( int* )( ( DWORD )&sv_cheats->fnChangeCallback + 0xC ) = 0; // ew
+					sv_cheats->SetValue( 1 );
+					g_csgo.engine( )->ExecuteClientCmd( "firstperson" );
+				}
+				init = true;
+			}
 		}
 	}
-
-	if ( cfg.misc.tp_bool && utils::get_key( cfg.misc.tp_key, cfg.misc.tp_style ) && csgo::m_local->is_alive( ) )
-	{
-		Vector view_angles;
-		g_csgo.engine( )->GetViewAngles( view_angles );
-
-		g_csgo.input( )->m_fCameraInThirdPerson = true;
-		g_csgo.input( )->m_vecCameraOffset = Vector( view_angles.x, view_angles.y, cfg.misc.tp_dist );
-
-		const auto cam_hull_offset = 12.f + ( csgo::m_init_fov / 4.8f - 18.f );
-		const Vector cam_hull_extents( cam_hull_offset, cam_hull_offset, cam_hull_offset );
-		Vector cam_forward;
-		const auto origin = csgo::m_local->get_eye_pos( );
-
-		math::angle_vectors( Vector( g_csgo.input( )->m_vecCameraOffset.x, g_csgo.input( )->m_vecCameraOffset.y, 0.0f ), cam_forward );
-
-		trace_t trace;
-		util_trace_hull( origin, origin - ( cam_forward * g_csgo.input( )->m_vecCameraOffset.z ), MASK_SOLID & ~CONTENTS_MONSTER, cam_hull_extents, &trace );
-
-		g_csgo.input( )->m_vecCameraOffset.z *= trace.fraction;
-	}
-	else
-		g_csgo.input( )->m_fCameraInThirdPerson = false;
 }
 
 void visuals::post_render( )

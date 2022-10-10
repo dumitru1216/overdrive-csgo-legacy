@@ -66,8 +66,13 @@ void __stdcall hooks::frame_stage_notify( client_frame_stage_t stage ) {
 				if ( cfg.removals.remove_flash )
 					csgo::m_local->m_flFlashDuration( ) = 0;
 
-				if ( g_csgo.input( )->m_fCameraInThirdPerson )
-					g_csgo.prediction( )->SetLocalAngles( csgo::m_real );
+				if ( cfg.misc.tp_bool && utils::get_key( cfg.misc.tp_key, cfg.misc.tp_style ) && csgo::m_local->is_alive( ) )
+				{
+					*( Vector* )( ( DWORD )csgo::m_local + 0x31C8 ) = csgo::m_real;
+				}
+
+			//	if ( g_csgo.input( )->m_fCameraInThirdPerson )
+				//	g_csgo.prediction( )->SetLocalAngles( csgo::m_real );
 
 				if ( csgo::m_local->m_fFlags( ) & FL_ONGROUND ) {
 					csgo::m_local->get_animation_state( )->m_bOnGround = true;
