@@ -1,0 +1,491 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="gui">
+      <UniqueIdentifier>{d8e9bc9c-c827-417a-ae17-9a1249552916}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="hack">
+      <UniqueIdentifier>{d4aa726d-3ad8-48cc-ac91-af02345ffc30}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="utils">
+      <UniqueIdentifier>{8edc477f-5dc9-45fe-bc1f-a491a9e2c4af}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="hack\hooks">
+      <UniqueIdentifier>{5dd74495-515e-46aa-838d-5035b890ea5b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="hack\hooks\vmt">
+      <UniqueIdentifier>{1689c60b-3712-40b3-b847-9af7dc8ff01b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="hack\hooks\detours">
+      <UniqueIdentifier>{4fff5982-9a55-45c5-8b1f-ed5eeb87714c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="hack\sdk">
+      <UniqueIdentifier>{df384a0e-6aba-4696-adbf-8121c5f83355}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="hack\sdk\math">
+      <UniqueIdentifier>{73fe11d2-7f17-4b09-b84d-ce2b2804d174}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="hack\sdk\interfaces">
+      <UniqueIdentifier>{7fcf67e2-c539-46a9-9ed2-06903b03ccff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="hack\sdk\other">
+      <UniqueIdentifier>{3f47651e-9851-4c24-86dd-a3e044d8f726}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="hack\sdk\entity">
+      <UniqueIdentifier>{cfb3a624-2ad2-47c2-8a44-90f9461d0373}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="hack\features">
+      <UniqueIdentifier>{d014fecf-9e73-447b-a209-3fb416d6bbc1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="lib">
+      <UniqueIdentifier>{09b32362-5a35-4532-a956-726d602dfa3a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="gui\controls">
+      <UniqueIdentifier>{8f8ca9fc-99cf-4be5-8d28-ef72c5b23af8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="render">
+      <UniqueIdentifier>{cbaebca2-2f35-4ea0-999d-f33719361ad2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="gui\config">
+      <UniqueIdentifier>{e4b1d9ef-c661-4c10-8314-87ae31cb8930}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="hack\globals.cpp">
+      <Filter>hack</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\math.cpp">
+      <Filter>utils</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="utils\utl.cpp">
+      <Filter>utils</Filter>
+    </ClCompile>
+    <ClCompile Include="hack\sdk\math\vector2d.cpp">
+      <Filter>hack\sdk\math</Filter>
+    </ClCompile>
+    <ClCompile Include="hack\sdk\interfaces\create_if.cpp">
+      <Filter>hack\sdk\interfaces</Filter>
+    </ClCompile>
+    <ClCompile Include="hack\sdk\math\vector4d.cpp">
+      <Filter>hack\sdk\math</Filter>
+    </ClCompile>
+    <ClCompile Include="hack\sdk\math\v_matrix.cpp">
+      <Filter>hack\sdk\math</Filter>
+    </ClCompile>
+    <ClCompile Include="hack\sdk\other\checksum_md5.cpp">
+      <Filter>hack\sdk\other</Filter>
+    </ClCompile>
+    <ClCompile Include="hack\sdk\other\checksum_crc.cpp">
+      <Filter>hack\sdk\other</Filter>
+    </ClCompile>
+    <ClCompile Include="hack\sdk\entity\entity.cpp">
+      <Filter>hack\sdk\entity</Filter>
+    </ClCompile>
+    <ClCompile Include="hack\sdk\entity\netvar.cpp">
+      <Filter>hack\sdk\entity</Filter>
+    </ClCompile>
+    <ClCompile Include="hack\hooks\vmt.cpp">
+      <Filter>hack\hooks</Filter>
+    </ClCompile>
+    <ClCompile Include="hack\hooks\vmt\vhooks.cpp">
+      <Filter>hack\hooks\vmt</Filter>
+    </ClCompile>
+    <ClCompile Include="hack\hooks\vmt\v_directx_hook.cpp">
+      <Filter>hack\hooks\vmt</Filter>
+    </ClCompile>
+    <ClCompile Include="gui\ui.cpp">
+      <Filter>gui</Filter>
+    </ClCompile>
+    <ClCompile Include="hack\hooks\vmt\v_wnd_proc.cpp">
+      <Filter>hack\hooks\vmt</Filter>
+    </ClCompile>
+    <ClCompile Include="gui\ui_helpers.cpp">
+      <Filter>gui</Filter>
+    </ClCompile>
+    <ClCompile Include="gui\controls\window.cpp">
+      <Filter>gui\controls</Filter>
+    </ClCompile>
+    <ClCompile Include="gui\controls\group.cpp">
+      <Filter>gui\controls</Filter>
+    </ClCompile>
+    <ClCompile Include="gui\controls\checkbox.cpp">
+      <Filter>gui\controls</Filter>
+    </ClCompile>
+    <ClCompile Include="gui\controls\slider.cpp">
+      <Filter>gui\controls</Filter>
+    </ClCompile>
+    <ClCompile Include="gui\controls\combo.cpp">
+      <Filter>gui\controls</Filter>
+    </ClCompile>
+    <ClCompile Include="gui\controls\multi.cpp">
+      <Filter>gui\controls</Filter>
+    </ClCompile>
+    <ClCompile Include="gui\controls\color_selector.cpp">
+      <Filter>gui\controls</Filter>
+    </ClCompile>
+    <ClCompile Include="gui\controls\keybind.cpp">
+      <Filter>gui\controls</Filter>
+    </ClCompile>
+    <ClCompile Include="hack\hooks\vmt\v_sv_cheats.cpp">
+      <Filter>hack\hooks\vmt</Filter>
+    </ClCompile>
+    <ClCompile Include="hack\hooks\vmt\v_lock_cursor.cpp">
+      <Filter>hack\hooks\vmt</Filter>
+    </ClCompile>
+    <ClCompile Include="hack\hooks\vmt\v_create_move.cpp">
+      <Filter>hack\hooks\vmt</Filter>
+    </ClCompile>
+    <ClCompile Include="hack\hooks\vmt\v_paint.cpp">
+      <Filter>hack\hooks\vmt</Filter>
+    </ClCompile>
+    <ClCompile Include="hack\features\visuals.cpp">
+      <Filter>hack\features</Filter>
+    </ClCompile>
+    <ClCompile Include="hack\features\chams.cpp">
+      <Filter>hack\features</Filter>
+    </ClCompile>
+    <ClCompile Include="hack\hooks\vmt\v_draw_model.cpp">
+      <Filter>hack\hooks\vmt</Filter>
+    </ClCompile>
+    <ClCompile Include="hack\features\autowall.cpp">
+      <Filter>hack\features</Filter>
+    </ClCompile>
+    <ClCompile Include="hack\features\animations.cpp">
+      <Filter>hack\features</Filter>
+    </ClCompile>
+    <ClCompile Include="hack\features\ragebot.cpp">
+      <Filter>hack\features</Filter>
+    </ClCompile>
+    <ClCompile Include="hack\hooks\vmt\v_net_show_fragments.cpp">
+      <Filter>hack\hooks\vmt</Filter>
+    </ClCompile>
+    <ClCompile Include="hack\hooks\vmt\v_in_prediction.cpp">
+      <Filter>hack\hooks\vmt</Filter>
+    </ClCompile>
+    <ClCompile Include="hack\hooks\vmt\v_is_hltv.cpp">
+      <Filter>hack\hooks\vmt</Filter>
+    </ClCompile>
+    <ClCompile Include="hack\hooks\vmt\v_frame_stage.cpp">
+      <Filter>hack\hooks\vmt</Filter>
+    </ClCompile>
+    <ClCompile Include="hack\hooks\vmt\v_override_view.cpp">
+      <Filter>hack\hooks\vmt</Filter>
+    </ClCompile>
+    <ClCompile Include="hack\hooks\vmt\v_paint_traverse.cpp">
+      <Filter>hack\hooks\vmt</Filter>
+    </ClCompile>
+    <ClCompile Include="hack\hooks\vmt\v_skip_occlusion.cpp">
+      <Filter>hack\hooks\vmt</Filter>
+    </ClCompile>
+    <ClCompile Include="gui\config\tgf_cfg.cpp">
+      <Filter>gui\config</Filter>
+    </ClCompile>
+    <ClCompile Include="hack\features\prediction.cpp">
+      <Filter>hack\features</Filter>
+    </ClCompile>
+    <ClCompile Include="hack\hooks\vmt\v_run_cmd.cpp">
+      <Filter>hack\hooks\vmt</Filter>
+    </ClCompile>
+    <ClCompile Include="hack\hooks\detours\dhooks.cpp">
+      <Filter>hack\hooks\detours</Filter>
+    </ClCompile>
+    <ClCompile Include="hack\hooks\detours\d_do_extra_bones.cpp">
+      <Filter>hack\hooks\detours</Filter>
+    </ClCompile>
+    <ClCompile Include="hack\hooks\detours\d_setup_bones.cpp">
+      <Filter>hack\hooks\detours</Filter>
+    </ClCompile>
+    <ClCompile Include="hack\hooks\detours\d_rules.cpp">
+      <Filter>hack\hooks\detours</Filter>
+    </ClCompile>
+    <ClCompile Include="hack\hooks\detours\d_update_animations.cpp">
+      <Filter>hack\hooks\detours</Filter>
+    </ClCompile>
+    <ClCompile Include="hack\hooks\detours\d_skip_animation_frame.cpp">
+      <Filter>hack\hooks\detours</Filter>
+    </ClCompile>
+    <ClCompile Include="hack\features\movement.cpp">
+      <Filter>hack\features</Filter>
+    </ClCompile>
+    <ClCompile Include="hack\features\antihit.cpp">
+      <Filter>hack\features</Filter>
+    </ClCompile>
+    <ClCompile Include="hack\hooks\vmt\v_draw_fog.cpp">
+      <Filter>hack\hooks\vmt</Filter>
+    </ClCompile>
+    <ClCompile Include="render\render.cpp" />
+    <ClCompile Include="gui\controls\text_input.cpp" />
+    <ClCompile Include="gui\controls\buton.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="hack\hooks\vmt.h">
+      <Filter>hack\hooks</Filter>
+    </ClInclude>
+    <ClInclude Include="hack\globals.h">
+      <Filter>hack</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\math.h">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\singleton.h">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\utl.h">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="hack\sdk\other\color.h">
+      <Filter>hack\sdk\other</Filter>
+    </ClInclude>
+    <ClInclude Include="hack\sdk\other\virtual.h">
+      <Filter>hack\sdk\other</Filter>
+    </ClInclude>
+    <ClInclude Include="hack\sdk\math\vector2d.h">
+      <Filter>hack\sdk\math</Filter>
+    </ClInclude>
+    <ClInclude Include="hack\sdk\src_kit.h">
+      <Filter>hack\sdk</Filter>
+    </ClInclude>
+    <ClInclude Include="hack\sdk\interfaces\create_if.h">
+      <Filter>hack\sdk\interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="hack\sdk\interfaces\i_app_system.h">
+      <Filter>hack\sdk\interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="hack\sdk\interfaces\i_input_system.h">
+      <Filter>hack\sdk\interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="hack\sdk\interfaces\i_alloc.h">
+      <Filter>hack\sdk\interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="hack\sdk\interfaces\i_base_client_dll.h">
+      <Filter>hack\sdk\interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="hack\sdk\interfaces\i_client_class.h">
+      <Filter>hack\sdk\interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="hack\sdk\interfaces\i_client_entity.h">
+      <Filter>hack\sdk\interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="hack\sdk\interfaces\i_client_entity_list.h">
+      <Filter>hack\sdk\interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="hack\sdk\interfaces\i_client_mode.h">
+      <Filter>hack\sdk\interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="hack\sdk\interfaces\i_client_networkable.h">
+      <Filter>hack\sdk\interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="hack\sdk\interfaces\i_client_renderable.h">
+      <Filter>hack\sdk\interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="hack\sdk\interfaces\i_client_state.h">
+      <Filter>hack\sdk\interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="hack\sdk\interfaces\i_client_thinkable.h">
+      <Filter>hack\sdk\interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="hack\sdk\interfaces\i_client_unknown.h">
+      <Filter>hack\sdk\interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="hack\sdk\interfaces\i_collideable.h">
+      <Filter>hack\sdk\interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="hack\sdk\interfaces\i_cvar.h">
+      <Filter>hack\sdk\interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="hack\sdk\interfaces\i_con_var.h">
+      <Filter>hack\sdk\interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="hack\sdk\interfaces\i_engine_trace.h">
+      <Filter>hack\sdk\interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="hack\sdk\interfaces\i_game_event_manager.h">
+      <Filter>hack\sdk\interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="hack\sdk\interfaces\i_glow_manager.h">
+      <Filter>hack\sdk\interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="hack\sdk\interfaces\i_handle_entity.h">
+      <Filter>hack\sdk\interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="hack\sdk\interfaces\i_input.h">
+      <Filter>hack\sdk\interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="hack\sdk\interfaces\i_material_system.h">
+      <Filter>hack\sdk\interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="hack\sdk\interfaces\i_mdl_cache.h">
+      <Filter>hack\sdk\interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="hack\sdk\interfaces\i_move_helper.h">
+      <Filter>hack\sdk\interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="hack\sdk\interfaces\i_panel.h">
+      <Filter>hack\sdk\interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="hack\sdk\interfaces\i_physics.h">
+      <Filter>hack\sdk\interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="hack\sdk\interfaces\i_prediction.h">
+      <Filter>hack\sdk\interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="hack\sdk\interfaces\i_render_view.h">
+      <Filter>hack\sdk\interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="hack\sdk\interfaces\i_surface.h">
+      <Filter>hack\sdk\interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="hack\sdk\interfaces\i_v_debug_overlay.h">
+      <Filter>hack\sdk\interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="hack\sdk\interfaces\i_v_engine_client.h">
+      <Filter>hack\sdk\interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="hack\sdk\interfaces\i_v_model_info_client.h">
+      <Filter>hack\sdk\interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="hack\sdk\interfaces\i_v_model_render.h">
+      <Filter>hack\sdk\interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="hack\sdk\interfaces\i_view_render.h">
+      <Filter>hack\sdk\interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="hack\sdk\math\q_angle.h">
+      <Filter>hack\sdk\math</Filter>
+    </ClInclude>
+    <ClInclude Include="hack\sdk\math\vector4d.h">
+      <Filter>hack\sdk\math</Filter>
+    </ClInclude>
+    <ClInclude Include="hack\sdk\math\v_matrix.h">
+      <Filter>hack\sdk\math</Filter>
+    </ClInclude>
+    <ClInclude Include="hack\sdk\math\vector.h">
+      <Filter>hack\sdk\math</Filter>
+    </ClInclude>
+    <ClInclude Include="hack\sdk\other\key_values.h">
+      <Filter>hack\sdk\other</Filter>
+    </ClInclude>
+    <ClInclude Include="hack\sdk\other\recv.h">
+      <Filter>hack\sdk\other</Filter>
+    </ClInclude>
+    <ClInclude Include="hack\sdk\other\convar.h">
+      <Filter>hack\sdk\other</Filter>
+    </ClInclude>
+    <ClInclude Include="hack\sdk\other\data_map.h">
+      <Filter>hack\sdk\other</Filter>
+    </ClInclude>
+    <ClInclude Include="hack\sdk\other\e_nums.h">
+      <Filter>hack\sdk\other</Filter>
+    </ClInclude>
+    <ClInclude Include="hack\sdk\other\global_vars.h">
+      <Filter>hack\sdk\other</Filter>
+    </ClInclude>
+    <ClInclude Include="hack\sdk\other\checsum_crc.h">
+      <Filter>hack\sdk\other</Filter>
+    </ClInclude>
+    <ClInclude Include="hack\sdk\other\checksum_md5.h">
+      <Filter>hack\sdk\other</Filter>
+    </ClInclude>
+    <ClInclude Include="hack\sdk\other\c_user_cmd.h">
+      <Filter>hack\sdk\other</Filter>
+    </ClInclude>
+    <ClInclude Include="hack\sdk\other\studio.h">
+      <Filter>hack\sdk\other</Filter>
+    </ClInclude>
+    <ClInclude Include="hack\sdk\entity\entity.h">
+      <Filter>hack\sdk\entity</Filter>
+    </ClInclude>
+    <ClInclude Include="hack\sdk\entity\netvar.h">
+      <Filter>hack\sdk\entity</Filter>
+    </ClInclude>
+    <ClInclude Include="hack\sdk\interfaces\i_bone_acessor.h">
+      <Filter>hack\sdk\interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="hack\sdk\other\utl_vector.h">
+      <Filter>hack\sdk\other</Filter>
+    </ClInclude>
+    <ClInclude Include="hack\hooks\detours.h">
+      <Filter>hack\hooks</Filter>
+    </ClInclude>
+    <ClInclude Include="hack\hooks\vmt\vhooks.h">
+      <Filter>hack\hooks\vmt</Filter>
+    </ClInclude>
+    <ClInclude Include="gui\ui.h">
+      <Filter>gui</Filter>
+    </ClInclude>
+    <ClInclude Include="gui\controls\window.h">
+      <Filter>gui\controls</Filter>
+    </ClInclude>
+    <ClInclude Include="gui\controls\group.h">
+      <Filter>gui\controls</Filter>
+    </ClInclude>
+    <ClInclude Include="gui\controls\checkbox.h">
+      <Filter>gui\controls</Filter>
+    </ClInclude>
+    <ClInclude Include="gui\controls\slider.h">
+      <Filter>gui\controls</Filter>
+    </ClInclude>
+    <ClInclude Include="gui\controls\combo.h">
+      <Filter>gui\controls</Filter>
+    </ClInclude>
+    <ClInclude Include="gui\controls\multi.h">
+      <Filter>gui\controls</Filter>
+    </ClInclude>
+    <ClInclude Include="gui\controls\init.h">
+      <Filter>gui\controls</Filter>
+    </ClInclude>
+    <ClInclude Include="gui\controls\color_selector.h">
+      <Filter>gui\controls</Filter>
+    </ClInclude>
+    <ClInclude Include="gui\controls\keybind.h">
+      <Filter>gui\controls</Filter>
+    </ClInclude>
+    <ClInclude Include="gui\config\config.h">
+      <Filter>gui\config</Filter>
+    </ClInclude>
+    <ClInclude Include="hack\features\visuals.h">
+      <Filter>hack\features</Filter>
+    </ClInclude>
+    <ClInclude Include="hack\features\chams.h">
+      <Filter>hack\features</Filter>
+    </ClInclude>
+    <ClInclude Include="hack\features\autowall.h">
+      <Filter>hack\features</Filter>
+    </ClInclude>
+    <ClInclude Include="hack\features\animations.h">
+      <Filter>hack\features</Filter>
+    </ClInclude>
+    <ClInclude Include="hack\features\ragebot.h">
+      <Filter>hack\features</Filter>
+    </ClInclude>
+    <ClInclude Include="gui\config\tgf_cfg.h">
+      <Filter>gui\config</Filter>
+    </ClInclude>
+    <ClInclude Include="hack\features\prediction.h">
+      <Filter>hack\features</Filter>
+    </ClInclude>
+    <ClInclude Include="hack\hooks\detours\dhooks.h">
+      <Filter>hack\hooks\detours</Filter>
+    </ClInclude>
+    <ClInclude Include="hack\features\movement.h">
+      <Filter>hack\features</Filter>
+    </ClInclude>
+    <ClInclude Include="hack\features\antihit.h">
+      <Filter>hack\features</Filter>
+    </ClInclude>
+    <ClInclude Include="render\render.h" />
+    <ClInclude Include="gui\controls\text_input.h" />
+    <ClInclude Include="gui\controls\buton.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="lib\detours.lib">
+      <Filter>lib</Filter>
+    </Library>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="lib\detours.pdb">
+      <Filter>lib</Filter>
+    </None>
+  </ItemGroup>
+</Project>
