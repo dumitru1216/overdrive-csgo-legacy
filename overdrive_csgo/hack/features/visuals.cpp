@@ -327,7 +327,7 @@ void visuals::post_render( )
 
 void visuals::remove_smoke( )
 {
-	static auto smoke_count = *( int* )( utils::pattern_scan( "client.dll", "55 8B EC 83 EC 08 8B 15 ? ? ? ? 0F 57 C0" ) + 8 );
+	static auto smoke_count = *( int* )( utils::pattern_scan( "client.dll", "A3 ? ? ? ? 57 8B CB" ) + 0x1 );
 
 	static std::vector<std::string> smoke_materials =
 	{
