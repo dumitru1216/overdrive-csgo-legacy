@@ -38,7 +38,7 @@ namespace hooks
 		engine.hook_index( indexes::m_is_hltv, hooks::is_hltv );
 
 		prediction.setup( g_csgo.prediction( ) );
-		prediction.hook_index( indexes::m_prediction, hooks::in_prediction );
+		//prediction.hook_index( indexes::m_prediction, hooks::in_prediction );
 		prediction.hook_index( indexes::m_run_cmd, hooks::run_cmd );
 
 		panel.setup( g_csgo.panel( ) );

@@ -41,7 +41,8 @@ void __stdcall hooks::frame_stage_notify( client_frame_stage_t stage ) {
 					if ( !e || !e->is_alive( ) || e->IsDormant( ) || e == csgo::m_local )
 						continue;
 
-					c_resolver::get( ).run( e );			
+					c_resolver::get().run(e);
+					
 				}
 			}
 

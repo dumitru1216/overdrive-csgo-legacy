@@ -218,7 +218,7 @@ CGlowObjectManager* context::glow( )
 	static CGlowObjectManager* glw = nullptr;
 
 	if ( !glw ) // инициализируем 1 раз
-		glw = *reinterpret_cast< CGlowObjectManager** >( utils::pattern_scan( "client.dll", "0F 11 05 ? ? ? ? 83 C8 01" ) + 3 );
+		glw = *reinterpret_cast< CGlowObjectManager** >( utils::pattern_scan( "client.dll", "0F 11 05 ?? ?? ?? ?? 83 C8 01" ) + 3 );
 
 	return glw;
 }
@@ -238,7 +238,7 @@ IMoveHelper* context::movehelper( )
 	static IMoveHelper* move = nullptr;
 
 	if ( !move ) // инициализируем 1 раз
-		move = **reinterpret_cast< IMoveHelper*** >( utils::pattern_scan( "client.dll", "8B 0D ? ? ? ? 8B 45 ? 51 8B D4 89 02 8B 01" ) + 2 );
+		move = **reinterpret_cast< IMoveHelper*** >( utils::pattern_scan( "client.dll", "8B 0D ?? ?? ?? ?? 8B 46 08 68" ) + 2 );
 
 	return move;
 }

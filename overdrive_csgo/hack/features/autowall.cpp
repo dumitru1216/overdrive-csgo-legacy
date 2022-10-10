@@ -34,7 +34,7 @@ ReturnInfo_t autowall::Think( Vector pos, m_entity* target, int specific_hitgrou
 	ang_vec( math::calculate_angle( start, pos ), fire_bullet_data.m_direction );
 
 	static const auto filter_simple = *reinterpret_cast< uint32_t* >( reinterpret_cast< uint32_t >(
-		( void* )utils::pattern_scan( "client.dll", "55 8B EC 83 E4 F0 83 EC 7C 56 52" ) ) + 0x3d );
+		( void* )utils::pattern_scan( "client.dll", "55 8B EC 83 E4 F0 83 EC 7C 56 52" ) ) + 0x3D );
 
 	uint32_t dwFilter[ 4 ] = { filter_simple,
 		reinterpret_cast< uint32_t >( csgo::m_local ), 0, 0 };
